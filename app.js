@@ -14,6 +14,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+const welcomePage = document.getElementById("welcome-page");
+const dashboard = document.getElementById("dashboard");
 const grid = document.getElementById("device-grid");
 const connectionStatus = document.getElementById("connection-status");
 const connectionLabel = document.getElementById("connection-label");
@@ -182,6 +184,19 @@ function initializeMission() {
 }
 
 document.getElementById("footer-year").textContent = String(new Date().getFullYear());
+document.getElementById("enter-dashboard").addEventListener("click", () => {
+  welcomePage.hidden = true;
+  dashboard.hidden = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  document.getElementById("show-welcome").focus();
+});
+document.getElementById("show-welcome").addEventListener("click", (event) => {
+  event.preventDefault();
+  dashboard.hidden = true;
+  welcomePage.hidden = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  document.getElementById("enter-dashboard").focus();
+});
 searchInput.addEventListener("input", renderDevices);
 filterSelect.addEventListener("change", renderDevices);
 document.getElementById("mission-button").addEventListener("click", handleMission);

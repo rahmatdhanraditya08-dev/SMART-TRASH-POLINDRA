@@ -10,9 +10,98 @@
     <script type="module" src="app.js"></script>
   </head>
   <body>
-    <main class="dashboard">
+    <main class="welcome-page" id="welcome-page">
+      <header class="welcome-topbar">
+        <a class="institution-brand" href="#welcome-page" aria-label="Politeknik Negeri Indramayu">
+          <span class="institution-seal" aria-hidden="true">P</span>
+          <span class="institution-copy">
+            <strong>POLITEKNIK NEGERI INDRAMAYU</strong>
+            <small>TEKNOLOGI REKAYASA INSTRUMENTASI DAN KONTROL</small>
+          </span>
+        </a>
+        <span class="welcome-edition">PROGRAM PENGABDIAN · 2026</span>
+      </header>
+
+      <section class="welcome-layout" aria-labelledby="welcome-title">
+        <div class="welcome-copy">
+          <p class="welcome-eyebrow"><span></span> PENGABDIAN KEPADA MASYARAKAT</p>
+          <h1 id="welcome-title">Teknologi yang peduli,<br /><em>lingkungan yang lestari.</em></h1>
+          <p class="welcome-description">Smart Trash Bin Monitoring menghadirkan pemantauan tempat sampah yang lebih cerdas untuk lingkungan yang lebih bersih.</p>
+
+          <div class="program-detail">
+            <span class="program-index">01</span>
+            <div>
+              <span>PROGRAM STUDI</span>
+              <strong>S1 Terapan Teknologi Rekayasa Instrumentasi dan Kontrol</strong>
+            </div>
+          </div>
+
+          <button class="enter-button" id="enter-dashboard" type="button">
+            <span>Masuk ke Dashboard</span>
+            <span class="enter-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="welcome-caption">POLITEKNIK NEGERI INDRAMAYU <span>·</span> INOVASI UNTUK MASYARAKAT</p>
+        </div>
+
+        <div class="team-area">
+          <div class="team-heading">
+            <div>
+              <p class="welcome-eyebrow">ORANG-ORANG DI BALIK INOVASI</p>
+              <h2>Tim Pengabdian</h2>
+            </div>
+            <span class="team-count">03 <i>PERSONEL</i></span>
+          </div>
+
+          <div class="team-grid">
+            <article class="profile-card profile-lecturer">
+              <div class="profile-photo photo-bagus">
+                <img src="assets/team/bagus-dharmawan.jpg" alt="Bagus Dharmawan Hadi" />
+                <span class="profile-number">01</span>
+              </div>
+              <div class="profile-info">
+                <span class="profile-role">DOSEN PENGABDIAN</span>
+                <h3>Bagus Dharmawan Hadi</h3>
+                <p>Politeknik Negeri Indramayu</p>
+              </div>
+            </article>
+
+            <article class="profile-card profile-lead">
+              <div class="profile-photo photo-syifa">
+                <img src="assets/team/syifa-alifia.jpeg" alt="Syifa Alifia" />
+                <span class="profile-number">02</span>
+              </div>
+              <div class="profile-info">
+                <span class="profile-role">KETUA TIM</span>
+                <h3>Syifa Alifia</h3>
+                <p>S1 Terapan Teknologi Rekayasa Instrumentasi dan Kontrol</p>
+              </div>
+            </article>
+
+            <article class="profile-card profile-member">
+              <div class="profile-photo photo-raditya">
+                <img src="assets/team/raditya-rahmat.jpeg" alt="Raditya Rahmat Dhani" />
+                <span class="profile-number">03</span>
+              </div>
+              <div class="profile-info">
+                <span class="profile-role">ANGGOTA TIM</span>
+                <h3>Raditya Rahmat Dhani</h3>
+                <p>S1 Terapan Teknologi Rekayasa Instrumentasi dan Kontrol</p>
+              </div>
+            </article>
+          </div>
+          <div class="team-rule"><span></span> BERSAMA MEMBANGUN KEBIASAAN BAIK</div>
+        </div>
+      </section>
+
+      <footer class="welcome-footer">
+        <span>SMART TRASH BIN MONITORING</span>
+        <span>INOVASI KECIL <i>·</i> DAMPAK BESAR</span>
+      </footer>
+    </main>
+
+    <main class="dashboard" id="dashboard" hidden>
       <header class="topbar">
-        <a class="brand" href="#top" aria-label="Smart Trash Bin, beranda">
+        <a class="brand" href="#welcome-page" id="show-welcome" aria-label="Kembali ke halaman tim">
           <span class="brand-mark" aria-hidden="true">♻</span>
           <span>SMART<span class="brand-light">BIN</span></span>
         </a>
