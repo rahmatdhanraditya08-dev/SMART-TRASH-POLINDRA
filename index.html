@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102b4e" />
+    <meta name="description" content="Pengabdian kepada Masyarakat Politeknik Negeri Indramayu, D4 Teknologi Rekayasa Instrumentasi dan Kontrol: monitoring smart trash bin realtime." />
+    <title>Pengabdian kepada Masyarakat | Polindra Smart Bin</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Smart Trash Bin, beranda">
+          <span class="brand-mark" aria-hidden="true">♻</span>
+          <span>SMART<span class="brand-light">BIN</span></span>
+        </a>
+        <div class="connection" id="connection-status" role="status" aria-live="polite">
+          <span class="connection-dot"></span>
+          <span id="connection-label">Menghubungkan...</span>
+        </div>
+      </header>
+
+      <section class="intro" id="top" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow campus-name">POLITEKNIK NEGERI INDRAMAYU</p>
+          <h1 id="page-title">D4 Teknologi Rekayasa Instrumentasi dan Kontrol</h1>
+          <p class="subtitle">Pengabdian kepada Masyarakat</p>
+          <p class="project-name">SMART TRASH BIN <span>·</span> MONITORING REALTIME</p>
+        </div>
+        <div class="live-clock" aria-label="Waktu pembaruan terakhir">
+          <span class="live-pulse" aria-hidden="true"></span>
+          <span>PEMBARUAN TERAKHIR</span>
+          <strong id="last-sync">Menunggu data</strong>
+        </div>
+      </section>
+
+      <section class="overview" aria-label="Ringkasan kondisi tempat sampah">
+        <article class="overview-item">
+          <span class="overview-icon icon-total" aria-hidden="true">▦</span>
+          <div><span class="overview-label">Total perangkat</span><strong id="total-count">0</strong></div>
+        </article>
+        <article class="overview-item">
+          <span class="overview-icon icon-online" aria-hidden="true">●</span>
+          <div><span class="overview-label">Sedang online</span><strong id="online-count">0</strong></div>
+        </article>
+        <article class="overview-item">
+          <span class="overview-icon icon-alert" aria-hidden="true">!</span>
+          <div><span class="overview-label">Perlu dikosongkan</span><strong id="full-count">0</strong></div>
+        </article>
+        <article class="overview-item">
+          <span class="overview-icon icon-offline" aria-hidden="true">↯</span>
+          <div><span class="overview-label">Perangkat offline</span><strong id="offline-count">0</strong></div>
+        </article>
+      </section>
+
+      <section class="mission" aria-labelledby="mission-title">
+        <div class="mission-symbol" aria-hidden="true">✦</div>
+        <div class="mission-copy">
+          <p class="eyebrow">LANGKAH KECIL, DAMPAK BESAR</p>
+          <h2 id="mission-title">Misi kebersihan hari ini</h2>
+          <p id="mission-text">Sampahmu punya tempat. Yuk, buang dengan bijak!</p>
+        </div>
+        <button class="mission-button" id="mission-button" type="button">
+          <span aria-hidden="true">✓</span> <span id="mission-button-label">Saya ikut menjaga</span>
+        </button>
+      </section>
+
+      <section class="devices-section" aria-labelledby="devices-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">KONDISI LAPANGAN</p>
+            <h2 id="devices-title">Perangkat <span id="device-heading-count">(4)</span></h2>
+          </div>
+          <div class="device-tools">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <span class="visually-hidden">Cari perangkat</span>
+              <input id="device-search" type="search" placeholder="Cari perangkat..." autocomplete="off" />
+            </label>
+            <label class="filter-box">
+              <span class="visually-hidden">Filter kondisi</span>
+              <select id="device-filter">
+                <option value="all">Semua kondisi</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+                <option value="full">Penuh (≥ 80%)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="device-grid" id="device-grid" aria-live="polite" aria-busy="true">
+          <div class="empty-state loading-state">
+            <span class="loader" aria-hidden="true"></span>
+            <p>Memuat data...</p>
+          </div>
+        </div>
+        <p class="data-note" id="data-note">Data diperbarui otomatis dari perangkat.</p>
+      </section>
+
+      <footer class="footer">
+        <span><span class="footer-mark" aria-hidden="true">♻</span> Lingkungan bersih dimulai dari kita.</span>
+        <span>SMARTBIN <span id="footer-year"></span></span>
+      </footer>
+    </main>
+  </body>
+</html>
